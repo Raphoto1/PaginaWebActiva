@@ -1,0 +1,84 @@
+//usar imagenes horizontales o cuadradas
+// tamaño columna control general, 1 rem = 16px
+$columna: 133px;
+$espaciado: 16px;
+$tiempoT: 0.5s;
+.Gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, $columna);
+    grid-auto-rows: 210px;
+    justify-content: center;
+    width: 85%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: $espaciado;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+    }
+    .galleryItem{
+        display: flex;
+        //posicionar para poder agregar contenido extra, amarrado al div de hexaR
+        position: relative;
+        top: 0;
+        left: 0;
+        transition: $tiempoT;
+        
+        //clip a hexagono
+        clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+        //ajustar separacion y ocupa 2 espacios de grilla
+        grid-column: span 2;
+        //ajustar deformacion vertical
+        height: ($columna*2) + $espaciado;
+        //ajuste desfase para hexagonos en el grid
+        &:nth-of-type(7n + 1){
+            grid-column: 2 / span 2;
+        }
+        &:hover{
+            transform:rotatey(-20deg) rotateX(-30deg) scale(1.1, 1.1);
+        }
+    }
+}
+// media queries
+@media screen and (max-width: 508px) {
+    .galleryItem:first-of-type{
+        grid-column: 1 / span 2 !important;  
+    }
+    .Gallery{
+        grid-auto-rows: ($columna*2) + $espaciado;
+    }
+}
+@media screen and (min-width: 509px) and (max-width: 685px) {
+    .galleryItem:nth-child(odd){
+        grid-column: 2 / span 2;
+    }
+}
+@media screen and (min-width: 686px) and (max-width: 857px) {
+    .galleryItem:nth-of-type(3n + 1){
+        grid-column: 2 / span 2;
+    }
+}
+@media screen and (min-width: 858px) and (max-width: 1033px) {
+    .galleryItem:nth-of-type(4n + 1){
+        grid-column: 2 / span 2;
+    }
+}
+@media screen and (min-width: 1034px) and (max-width: 1208px) {
+    .galleryItem:nth-of-type(5n + 1){
+        grid-column: 2 / span 2;
+    }
+}
+@media screen and (min-width: 1209px) and (max-width: 1384px) {
+    .galleryItem:nth-of-type(6n + 1){
+        grid-column: 2 / span 2;
+    }
+}
+@media screen and (min-width: 1385px) {
+    .galleryItem:nth-of-type(7n + 1){
+        grid-column: 2 / span 2;
+    }
+}
