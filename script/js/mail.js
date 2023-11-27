@@ -1,5 +1,5 @@
 const formDom = document.querySelector(`form`);
-const url = "shops.creativerafa.com/api/contact/"
+const url = "https://shops.creativerafa.com/api/contact/"
 formDom.addEventListener(`submit`, handleSubmit);
 
 async function handleSubmit(event) {
@@ -18,12 +18,12 @@ const json = JSON.stringify(data); // Convertir el objeto a una cadena JSON
     .then((res) => console.log(res))
     .then((data) => {
         alert("Gracias!!!!");
-        window.location.replace("http://www.creativerafa.com");
+        window.location.replace("https://www.creativerafa.com");
       console.log(data);
     })
       .catch(error => {
           alert("Ocurrió un error: " + error.message)
-          
+          console.log(error);
     })
   console.log(response);
 }
