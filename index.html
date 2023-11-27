@@ -73,7 +73,7 @@
                 <a class="nav-link colorNav" href="#Home"> Home </a>
               </li>
               <li>
-                <a class="nav-link colorNav" href="./Extras/ShopSeeker/index.html">Shop Seeker</a>
+                <a class="nav-link colorNav" href="shops.creativerafa.com">Shop Seeker</a>
               </li>
               <li class="nav-item">
                 <button
@@ -135,7 +135,37 @@
             <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form action="https://formsubmit.co/007bb08058c298c7f4de61b1953c3b2f" method="POST" class="container-fluid py-1 justify-content-center col-sm-8 col-md-12 align-items-center">
+            <form action="shops.creativerafa.com" method="post" class="container-fluid py-1 justify-content-center col-sm-8 col-md-12 align-items-center">
+              <label for="name" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded"
+              >Name or Organization</label
+            >
+            <input type="text" name="name" id="Name" class="form-control col-md-2" />
+            <br />
+            <label for="email" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">E-mail</label>
+              <input
+              name="email"
+                type="email"
+                id="Email"
+                placeholder="Your@mail.com"
+                class="form-control"
+              />
+              <br />
+              <div class="form-floating">
+                <textarea
+                name="message"
+                  id="contactReason"
+                  placeholder="I love to create new and awesome things :D"
+                  class="form-control"
+                >
+                </textarea>
+              </div>
+              <br />
+              <div class="d-flex justify-content-around">
+                <input type="submit" value="Let's Talk :)" class="btn btn-primary"/>
+                <input type="reset" value="Ups forgetit :(" class="btn btn-primary"/>
+              </div>
+            </form>
+            <!-- <form action="https://formsubmit.co/007bb08058c298c7f4de61b1953c3b2f" method="POST" class="container-fluid py-1 justify-content-center col-sm-8 col-md-12 align-items-center">
               <label for="Name" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded"
                 >Name or Organization</label
               >
@@ -240,7 +270,7 @@
                 <input type="submit" value="Let's Talk :)" class="btn btn-primary"/>
                 <input type="reset" value="Ups forgetit :(" class="btn btn-primary"/>
               </div>
-            </form>
+            </form> -->
           </div>
           
         </div>

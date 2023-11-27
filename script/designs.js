@@ -6,6 +6,8 @@ async function getDesigns() {
         credentials: "include",
     })
         .then((res) => res.json())
-        .then((data) => console.log(data));
+        .then((data) => console.log(data)); 
+    
 }
 getDesigns();
+

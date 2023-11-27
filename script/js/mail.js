@@ -1,20 +1,29 @@
-const formDom = document.querySelector(`#form`);
-
+const formDom = document.querySelector(`form`);
+const url = "shops.creativerafa.com/api/contact/"
 formDom.addEventListener(`submit`, handleSubmit);
 
-async function handleSubmit(event){
-    event.preventDefault();
+async function handleSubmit(event) {
+    console.log('entro al handle');
+  event.preventDefault();
     const form = new FormData(this);
-    console.log(form.get("Nombre"));
-    const response = await fetch(this.action,{ 
-        method: this.method, 
-        body: form, 
-        headers:{
-            Accept: `aplication/json`
-        }
+    const data = Object.fromEntries(form.entries()); // Convertir el formulario a un objeto
+const json = JSON.stringify(data); // Convertir el objeto a una cadena JSON
+  const response = await fetch(url, {
+      method: 'POST',
+      body: form,
+      headers: {
+        "Content-Type": "application/json",
+      },
+  })
+    .then((res) => console.log(res))
+    .then((data) => {
+        alert("Gracias!!!!");
+        window.location.replace("http://www.creativerafa.com");
+      console.log(data);
     })
-    if (response.ok) {
-        this.reset
-        alert("Let's talk thankyou")
-    }
+      .catch(error => {
+          alert("Ocurrió un error: " + error.message)
+          
+    })
+  console.log(response);
 }
