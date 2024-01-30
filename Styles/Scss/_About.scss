@@ -1,7 +1,7 @@
 .About{
     display: flex;
     background-color: var(--colorPar);
-    height: 100%;
+    height: 130vh;
     width: 100%;
     .titleV{
         justify-content: center;
@@ -29,10 +29,12 @@
     } 
 }
 @media only screen and (max-width: 771px) {
+    .About{ height: auto;}
     .aboutPhoto{
         display: none !important;
         @include tFoto(70%);
         img{
+            
             height: 100%;
             width: auto;
             overflow: hidden;
@@ -43,6 +45,7 @@
         font-size: medium;
     }
 }
+
 @each $categoria, $colorPar in $categoriasPar {
     .about#{$categoria}{
         background-color: $colorPar;

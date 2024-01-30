@@ -1,12 +1,12 @@
 .Skillset{
   background-color: var(--colorImpar);
   height: 100%;
-  padding-bottom: 5%;
+  padding-bottom: 8%;
 }
 //General
 .mainSG {
     display:flex;
-    --s: 150px;  /* size  */
+    --s: 120px;  /* size  */
     --m: 5px;    /* margin */
     --f: calc(1.732 * var(--s) + 4 * var(--m)  - 1px);
     padding-bottom: 1.1%;
@@ -53,7 +53,7 @@
   }
   @media only screen and (max-width: 450px) {
     .fullskills div{
-      padding-bottom: 20%;
+      padding-bottom: 10%;
     }
   }
   @each $categoria, $colorImpar in $categoriasImp {
