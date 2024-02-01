@@ -92,100 +92,24 @@ rel="stylesheet"
             <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form action="https://formsubmit.co/007bb08058c298c7f4de61b1953c3b2f" method="POST" class="container-fluid py-1 justify-content-center col-sm-8 col-md-12 align-items-center">
-              <label for="Name" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded"
-                >Name or Organization</label
-              >
-              <input type="text" name="Nombre" id="Name" class="form-control col-md-2" />
-              <br />
-              <label for="Phone" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">Phone</label>
+            <form class="container-fluid py-1 justify-content-center col-sm-8 col-md-12 align-items-center">
+              <label for="name" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded"
+              >Name or Organization</label
+            >
+            <input type="text" name="name" id="Name" class="form-control col-md-2" />
+            <br />
+            <label for="email" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">E-mail</label>
               <input
-              name="telephone"
-                type="tel"
-                id="Phone"
-                placeholder="Phone Number"
-                class="form-control"
-              />
-              <br />
-              <label for="Email" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">E-mail</label>
-              <input
-              name="mail address"
+              name="email"
                 type="email"
                 id="Email"
                 placeholder="Your@mail.com"
                 class="form-control"
               />
               <br />
-              <label for="Country" name="Pais" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">Country</label>
-              <select name="Country" class="form-select">
-                <option selected="selected">Choose a Country</option>
-                <option>Colombia</option>
-                <option>Argentina</option>
-                <option>United States</option>
-                <option>Other</option>
-              </select>
-              <br />
-              <div>
-                <h2 class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">Reply via</h2>
-                <div class="form-check form-check-inline">
-                  <input
-                    name="Reply Via"
-                    type="radio"
-                    name="replyV"
-                    value="phoneC"
-                    class="form-check-input"
-                  />
-                  <label for="phoneC" class="form-check-label">Phone Call</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input
-                    type="radio"
-                    name="replyV"
-                    value="emailC"
-                    class="form-check-input"
-                  />
-                  <label for="emailC" class="form-check-label">Email</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input
-                    type="radio"
-                    name="replyV"
-                    value="Whatsapp"
-                    class="form-check-input"
-                  />
-                  <label for="Whatsapp" class="form-check-label">Whatsapp</label>
-                </div>
-              </div>
-              <br />
-              <h2 class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">Any Specific Area?</h2>
-              <div class="form-check-inline">
-                <span class="form-check-label">General</span>
-                <input
-                  type="checkbox"
-                  name="General"
-                  checked="checked"
-                  class="form-check-input"
-                />
-              </div>
-              <div class="form-check-inline">
-                <span class="form-check-label">VFX</span>
-                <input type="checkbox" name="VFX" class="form-check-input" />
-              </div>
-              <div class="form-check-inline">
-                <span class="form-check-label">Arts</span>
-                <input type="checkbox" name="Arts" class="form-check-input" />
-              </div>
-              <div class="form-check-inline">
-                <span class="form-check-label">Development</span>
-                <input type="checkbox" name="Development" class="form-check-input" />
-              </div>
-              <br />
-            
-              <label for="contactReason" class="container-fluid form-label col-sm-12 col-md-12 col-form-label-lg text-center text-bg-primary rounded">¿How can I help you?</label>
-              <br />
               <div class="form-floating">
                 <textarea
-                name="info necesaria"
+                name="message"
                   id="contactReason"
                   placeholder="I love to create new and awesome things :D"
                   class="form-control"
@@ -358,5 +282,7 @@ rel="stylesheet"
 type="text/javascript"
 src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"
 ></script>
+    <!-- script personal -->
+    <script src="./../script/js/mail.js"></script>
   </body>
 </html>
